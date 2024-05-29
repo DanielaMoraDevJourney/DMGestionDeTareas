@@ -7,8 +7,8 @@ namespace DMGestionDeTareas.Models
         public int DMTareaId { get; set; }
 
         [Required]
-        public string DMTitulo { get; set; }
-        public string DMDescripcion { get; set; }
+        public string? DMTitulo { get; set; }
+        public string? DMDescripcion { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -17,13 +17,13 @@ namespace DMGestionDeTareas.Models
 
         [Required]
         public int DMPrioridadId { get; set; }
-        public DMPrioridad DMPrioridad { get; set; }
-        public ICollection<DMPrioridad> DMPrioridades { get; set; }
+        public DMPrioridad? DMPrioridad { get; set; }
+        public ICollection<DMPrioridad>? DMPrioridades { get; set; }
 
         [Required]
         public int DMCategoriaId { get; set; }
-        public DMCategoria DMCategoria { get; set; }
-        public ICollection<DMCategoria> DMCategorias { get; set; }
+        public DMCategoria? DMCategoria { get; set; }
+        public ICollection<DMCategoria>? DMCategorias { get; set; }
 
 
     }

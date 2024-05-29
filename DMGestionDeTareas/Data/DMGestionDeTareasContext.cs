@@ -13,4 +13,8 @@ using DMGestionDeTareas.Models;
         }
 
         public DbSet<DMGestionDeTareas.Models.DMCategoria> DMCategoria { get; set; } = default!;
+
+public DbSet<DMGestionDeTareas.Models.DMPrioridad> DMPrioridad { get; set; } = default!;
+
+public DbSet<DMGestionDeTareas.Models.DMTarea> DMTarea { get; set; } = default!;
     }

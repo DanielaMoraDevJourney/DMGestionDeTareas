@@ -1,10 +1,10 @@
-﻿@model DMGestionDeTareas.Models.DMCategoria
+﻿@model DMGestionDeTareas.Models.DMPrioridad
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1 class="display-4">Crear Categoria</h1>
+<h1 class="display-4">Crear una Prioridad</h1>
 
 <hr />
 <div class="row justify-content-center">
@@ -36,10 +36,8 @@
 </div>
 
 <div class="mt-3 text-center">
-    <a asp-action="Index" class="btn btn-secondary">Regresar a la lista de Categoría</a>
+    <a asp-action="Index" class="btn btn-secondary">Regresar a la lista de Categorías</a>
 </div>
-
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

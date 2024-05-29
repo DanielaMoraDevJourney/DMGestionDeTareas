@@ -7,8 +7,8 @@ namespace DMGestionDeTareas.Models
         public int DMCategoriaId { get; set; }
 
         [Required]
-        public string DMNombre { get; set; }
-        public string DMDescripcion { get; set; }
+        public string? DMNombre { get; set; }
+        public string? DMDescripcion { get; set; }
         //public ICollection<DMTarea> DMTareas { get; set; }
     }
 }
