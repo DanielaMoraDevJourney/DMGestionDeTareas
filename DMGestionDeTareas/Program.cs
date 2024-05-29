@@ -1,4 +1,8 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<DMGestionDeTareasContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DMGestionDeTareasContext") ?? throw new InvalidOperationException("Connection string 'DMGestionDeTareasContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

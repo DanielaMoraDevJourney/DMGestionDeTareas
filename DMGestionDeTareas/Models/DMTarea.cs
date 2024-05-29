@@ -16,20 +16,17 @@ namespace DMGestionDeTareas.Models
         public DateTime DMFechaVencimiento { get; set; }
 
         [Required]
-        public DMPrioridad DMPrioridadTarea { get; set; }
+        public int DMPrioridadId { get; set; }
+        public DMPrioridad DMPrioridad { get; set; }
+        public ICollection<DMPrioridad> DMPrioridades { get; set; }
 
         [Required]
         public int DMCategoriaId { get; set; }
         public DMCategoria DMCategoria { get; set; }
+        public ICollection<DMCategoria> DMCategorias { get; set; }
+
+
     }
 
-    public enum DMPrioridad
-    {
-        Baja,
-        Media,
-        Alta,
-        MuyAlta,
-        Urgente
-    }
 }
 
