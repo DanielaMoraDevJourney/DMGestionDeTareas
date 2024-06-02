@@ -1,16 +1,16 @@
 ﻿@model IEnumerable<DMGestionDeTareas.Models.DMCategoria>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Índice";
 }
 
-<h1>Index</h1>
+<h1 class="my-4">Categorías</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-success mb-3" asp-action="Create">Crear Nueva Categoría</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.DMNombre)
@@ -18,24 +18,25 @@
             <th>
                 @Html.DisplayNameFor(model => model.DMDescripcion)
             </th>
-            <th></th>
+            <th class="text-center">Acciones</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DMNombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DMDescripcion)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DMCategoriaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DMCategoriaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DMCategoriaId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DMNombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DMDescripcion)
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.DMCategoriaId">Editar</a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.DMCategoriaId">Detalles</a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.DMCategoriaId">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
