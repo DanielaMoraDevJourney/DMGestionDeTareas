@@ -3,40 +3,41 @@
 @{
     ViewData["Title"] = "Índice";
 }
+<div class="container">
+    <h1 class="my-4">Prioridades</h1>
 
-<h1 class="my-4">Prioridades</h1>
-
-<p>
-    <a class="btn btn-success mb-3" asp-action="Create">Crear Nueva Prioridad</a>
-</p>
-<table class="table table-bordered table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DMNombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DMDescripcion)
-            </th>
-            <th class="text-center">Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <p>
+        <a class="btn btn-success mb-3" asp-action="Create">Crear Nueva Prioridad</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DMNombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DMDescripcion)
-                </td>
-                <td class="text-center">
-                    <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.DMPrioridadId">Editar</a>
-                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.DMPrioridadId">Detalles</a>
-                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.DMPrioridadId">Eliminar</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.DMNombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DMDescripcion)
+                </th>
+                <th class="text-center">Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMNombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMDescripcion)
+                    </td>
+                    <td class="text-center">
+                        <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.DMPrioridadId">Editar</a>
+                        <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.DMPrioridadId">Detalles</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.DMPrioridadId">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

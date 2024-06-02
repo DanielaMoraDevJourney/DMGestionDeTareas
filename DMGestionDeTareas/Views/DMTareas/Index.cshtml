@@ -4,57 +4,60 @@
     ViewData["Title"] = "Índice";
 }
 
-<h1 class="my-4">Tareas</h1>
+<div class="container">
+    <h1 class="my-4">Tareas</h1>
 
-<p>
-    <a class="btn btn-success mb-3" asp-action="Create">Crear Nueva Tarea</a>
-</p>
-<table class="table table-bordered table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DMTitulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DMDescripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DMFechaVencimiento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DMPrioridad.DMNombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DMCategoria.DMNombre)
-            </th>
-            <th class="text-center">Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <p>
+        <a class="btn btn-success mb-3" asp-action="Create">Crear Nueva Tarea</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DMTitulo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DMDescripcion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DMFechaVencimiento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DMPrioridad.DMNombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DMCategoria.DMNombre)
-                </td>
-                <td class="text-center">
-                    <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.DMTareaId">Editar</a>
-                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.DMTareaId">Detalles</a>
-                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.DMTareaId">Eliminar</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.DMTitulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DMDescripcion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DMFechaVencimiento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DMPrioridad.DMNombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DMCategoria.DMNombre)
+                </th>
+                <th class="text-center">Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMTitulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMDescripcion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMFechaVencimiento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMPrioridad.DMNombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMCategoria.DMNombre)
+                    </td>
+                    <td class="text-center">
+                        <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.DMTareaId">Editar</a>
+                        <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.DMTareaId">Detalles</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.DMTareaId">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
