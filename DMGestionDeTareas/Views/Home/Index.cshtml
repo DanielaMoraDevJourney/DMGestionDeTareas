@@ -3,6 +3,37 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">GESTOR DE TAREAS</h1>
+    <div class="container text-center">
+        <div class="row mb-4">
+            <div class="col">
+                <a class="btn btn-outline-primary btn-lg" asp-area="" asp-controller="DMCategorias" asp-action="Index">Categorías</a>
+            </div>
+            <div class="col">
+                <a class="btn btn-outline-primary btn-lg" asp-area="" asp-controller="DMPrioridads" asp-action="Index">Prioridades</a>
+            </div>
+            <div class="col">
+                <a class="btn btn-outline-primary btn-lg" asp-area="" asp-controller="DMTareas" asp-action="Index">Tareas</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="~/css/categoriasDM.jpg" class="img-fluid rounded mb-4" alt="Categorías">
+                <h5>Categorías</h5>
+                <p>Organiza tus tareas en diferentes categorías para una mejor gestión.</p>
+            </div>
+            <div class="col">
+                <img src="~/css/prioridadesDM.jpg" class="img-fluid rounded mb-4" alt="Prioridades">
+                <h5>Prioridades</h5>
+                <p>Establece prioridades para tus tareas y gestiona tu tiempo de manera eficiente.</p>
+            </div>
+            <div class="col">
+                <img src="~/css/tareasDM.jpg" class="img-fluid rounded mb-4" alt="Tareas">
+                <h5>Tareas</h5>
+                <p>Crea y sigue tus tareas con facilidad para mantenerte organizado.</p>
+            </div>
+        </div>
+    </div>
+    <p class="mt-4">Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
